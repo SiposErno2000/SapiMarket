@@ -1,6 +1,6 @@
 package com.example.sapimarket.ui.login;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,12 +13,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.sapimarket.R;
 import com.example.sapimarket.ui.constants.Constants;
-import com.example.sapimarket.ui.home.HomeFragment;
+import com.example.sapimarket.ui.home.HomeActivity;
 import com.example.sapimarket.ui.register.RegisterFragment;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -93,8 +92,8 @@ public class LoginFragment extends Fragment {
 
                     if (name.equals(currentName) && pass.equals(currentPassword)) {
                         Constants.setCurrentChild(currentName);
-                        HomeFragment homeFragment = new HomeFragment();
-                        loadFragment(homeFragment);
+                        Intent intent = new Intent(getActivity().getApplication(), HomeActivity.class);
+                        loadActivity(intent);
                     } else {
                         Toast.makeText(getActivity(), "Wrong credentials!", Toast.LENGTH_SHORT).show();
                     }
@@ -108,6 +107,10 @@ public class LoginFragment extends Fragment {
                 Log.d(TAG, "Unsuccessful data request!");
             }
         });
+    }
+
+    private void loadActivity(Intent intent) {
+        startActivity(intent);
     }
 
     private void loadFragment(Fragment fragment) {

@@ -15,4 +15,9 @@
     <dimen name="small_margin_top_login">10dp</dimen>
     <dimen name="validate_button_width">300dp</dimen>
 
+<!--    RegisterScreen-->
+    <dimen name="logo_top_register">15dp</dimen>
+    <dimen name="register_text">25dp</dimen>
+    <dimen name="register_size_logo">100dp</dimen>
+    <dimen name="small_margin_top_register">5dp</dimen>
 </resources>

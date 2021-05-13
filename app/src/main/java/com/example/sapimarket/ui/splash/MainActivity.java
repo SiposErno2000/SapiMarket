@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import com.example.sapimarket.R;
 import com.example.sapimarket.ui.login.LoginFragment;
+import com.example.sapimarket.ui.register.RegisterFragment;
 
 import java.util.List;
 
@@ -41,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         for (Object f: fragmentList) {
             if (f instanceof LoginFragment) {
                 handled = ((LoginFragment)f).onBackPressed();
+                if (handled) {
+                    break;
+                }
+            }
+            else if (f instanceof RegisterFragment) {
+                handled = ((RegisterFragment)f).onBackPressed();
                 if (handled) {
                     break;
                 }
