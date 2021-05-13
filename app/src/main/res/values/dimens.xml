@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <!--    SplashScreen-->
-    <dimen name="logo_size">300dp</dimen>
+    <dimen name="logo_size_splash">300dp</dimen>
     <dimen name="margin_top_splash">100dp</dimen>
-    <dimen name="app_name_size">50dp</dimen>
-    <dimen name="margin_side">30dp</dimen>
+    <dimen name="app_name_size_splash">50dp</dimen>
+    <dimen name="margin_side_splash">30dp</dimen>
+
+<!--    LoginScreen-->
+    <dimen name="logo_size_login">150dp</dimen>
+    <dimen name="margin_top_login">30dp</dimen>
+    <dimen name="login_text">50dp</dimen>
+    <dimen name="margin_side_login">30dp</dimen>
+    <dimen name="margin_top_login_text">10dp</dimen>
+    <dimen name="small_margin_top_login">10dp</dimen>
+    <dimen name="validate_button_width">300dp</dimen>
+
 </resources>

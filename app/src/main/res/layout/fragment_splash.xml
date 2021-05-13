@@ -15,9 +15,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:fontFamily="sans-serif"
-        android:textSize="@dimen/app_name_size"
-        android:layout_marginLeft="@dimen/margin_side"
-        android:layout_marginRight="@dimen/margin_side"
+        android:textSize="@dimen/app_name_size_splash"
+        android:layout_marginLeft="@dimen/margin_side_splash"
+        android:layout_marginRight="@dimen/margin_side_splash"
         android:layout_marginTop="@dimen/margin_top_splash"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -26,7 +26,7 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size_splash"
         android:layout_marginTop="@dimen/margin_top_splash"
         android:src="@drawable/logo2"
         app:layout_constraintTop_toTopOf="@id/appName" />
