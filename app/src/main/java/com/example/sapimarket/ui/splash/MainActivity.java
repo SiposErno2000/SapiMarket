@@ -9,6 +9,9 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.sapimarket.R;
+import com.example.sapimarket.ui.login.LoginFragment;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,27 @@ public class MainActivity extends AppCompatActivity {
     public void loadFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.popBackStackImmediate();
-        fragmentManager.beginTransaction().addToBackStack(null).replace(R.id.mainActivity, fragment).commit();
+        fragmentManager.beginTransaction()
+                .addToBackStack(null)
+                .replace(R.id.mainActivity, fragment)
+                .commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        List fragmentList = getSupportFragmentManager().getFragments();
+
+        boolean handled = false;
+        for (Object f: fragmentList) {
+            if (f instanceof LoginFragment) {
+                handled = ((LoginFragment)f).onBackPressed();
+                if (handled) {
+                    break;
+                }
+            }
+        }
+        if (!handled) {
+            super.onBackPressed();
+        }
     }
 }

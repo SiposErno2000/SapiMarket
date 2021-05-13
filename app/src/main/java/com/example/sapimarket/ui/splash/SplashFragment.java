@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -58,6 +59,10 @@ public class SplashFragment extends Fragment {
     private void loadFragment(Fragment fragment) {
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.popBackStackImmediate();
-        fragmentManager.beginTransaction().addToBackStack(null).replace(R.id.mainActivity, fragment).commit();
+        fragmentManager.beginTransaction()
+                .setCustomAnimations(R.anim.pop_up, FragmentTransaction.TRANSIT_NONE)
+                .addToBackStack(null)
+                .replace(R.id.mainActivity, fragment)
+                .commit();
     }
 }
