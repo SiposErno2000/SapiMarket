@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "701436348006",
+    "project_id": "sapimarket-adcbe",
+    "storage_bucket": "sapimarket-adcbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701436348006:android:5be0245f60c349040e4fa7",
+        "android_client_info": {
+          "package_name": "com.example.sapimarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701436348006-mo2kmdjc5quksarc8dmma95r0j05p49j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7We1WwZ09toFvwms13C4Bifjf71yK1U0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701436348006-mo2kmdjc5quksarc8dmma95r0j05p49j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

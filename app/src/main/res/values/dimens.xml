@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    SplashScreen-->
+    <dimen name="logo_size">300dp</dimen>
+    <dimen name="margin_top_splash">100dp</dimen>
+    <dimen name="app_name_size">50dp</dimen>
+    <dimen name="margin_side">30dp</dimen>
+</resources>
