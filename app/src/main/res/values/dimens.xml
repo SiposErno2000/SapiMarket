@@ -20,4 +20,15 @@
     <dimen name="register_text">25dp</dimen>
     <dimen name="register_size_logo">100dp</dimen>
     <dimen name="small_margin_top_register">5dp</dimen>
+
+<!--    HomeScreen-->
+    <dimen name="textSize">25dp</dimen>
+    <dimen name="marginLeft">15dp</dimen>
+    <dimen name="marginRight">15dp</dimen>
+    <dimen name="marginTop">10dp</dimen>
+    <dimen name="addButtonTop">5dp</dimen>
+    <dimen name="marginBottom">10dp</dimen>
+    <dimen name="itemSize">40dp</dimen>
+    <dimen name="nullSize">0dp</dimen>
+    <dimen name="margin">70dp</dimen>
 </resources>
