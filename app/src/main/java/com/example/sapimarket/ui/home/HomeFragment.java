@@ -28,7 +28,6 @@ public class HomeFragment extends Fragment {
     private View view;
     private List<Model> modelList;
     private ModelAdapter adapter;
-
     private Button addButton;
 
     public HomeFragment() {
@@ -51,8 +50,6 @@ public class HomeFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-        //return view;
-        view = inflater.inflate(R.layout.fragment_home, container, false);
         getModels();
         return view;
     }
