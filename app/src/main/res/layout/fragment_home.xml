@@ -87,7 +87,6 @@
         android:layout_marginTop="@dimen/marginBottom"
         android:layout_marginLeft="@dimen/marginLeft"
         android:layout_marginRight="@dimen/marginRight"
-        android:layout_below="@id/constraintLayout"
-        android:background="@drawable/gradient"/>
+        android:layout_below="@id/constraintLayout" />
 
 </RelativeLayout>

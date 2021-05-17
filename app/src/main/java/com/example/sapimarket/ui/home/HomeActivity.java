@@ -10,6 +10,8 @@ import android.os.Bundle;
 import com.example.sapimarket.R;
 import com.example.sapimarket.ui.login.LoginFragment;
 
+import java.util.List;
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override
@@ -30,5 +32,23 @@ public class HomeActivity extends AppCompatActivity {
                 .addToBackStack(null)
                 .replace(R.id.fragment_container, fragment)
                 .commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        List fragmentList = getSupportFragmentManager().getFragments();
+
+        boolean handled = false;
+        for (Object f : fragmentList) {
+            if (f instanceof HomeFragment) {
+                handled = ((HomeFragment) f).onBackPressed();
+                if (handled) {
+                    break;
+                }
+            }
+        }
+        if (!handled) {
+            super.onBackPressed();
+        }
     }
 }
