@@ -21,4 +21,8 @@
     <string name="price">Price</string>
     <string name="category">Category</string>
     <string name="description">Description</string>
+    <string name="owner">Owner</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="call_seller">Call Seller</string>
 </resources>
