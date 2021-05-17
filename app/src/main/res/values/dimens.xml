@@ -22,7 +22,7 @@
     <dimen name="small_margin_top_register">5dp</dimen>
 
 <!--    HomeScreen-->
-    <dimen name="textSize">25dp</dimen>
+    <dimen name="textSize">25sp</dimen>
     <dimen name="marginLeft">15dp</dimen>
     <dimen name="marginRight">15dp</dimen>
     <dimen name="marginTop">10dp</dimen>

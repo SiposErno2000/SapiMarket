@@ -7,11 +7,13 @@ import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.sapimarket.R;
@@ -19,12 +21,15 @@ import com.example.sapimarket.data.ModelCache;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.example.sapimarket.ui.addItem.AddItemFragment;
 
 public class HomeFragment extends Fragment {
 
     private View view;
     private List<Model> modelList;
     private ModelAdapter adapter;
+
+    private Button addButton;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -34,6 +39,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        addButton = view.findViewById(R.id.addButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container,new AddItemFragment());
+                fragmentTransaction.commit();
+            }
+        });
+        //return view;
         view = inflater.inflate(R.layout.fragment_home, container, false);
         getModels();
         return view;
