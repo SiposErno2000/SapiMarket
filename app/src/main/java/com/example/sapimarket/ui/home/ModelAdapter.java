@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.sapimarket.R;
-import com.example.sapimarket.ui.detail.DetailFragment;
+import com.example.sapimarket.ui.detailPages.DetailPageFragment;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ModelViewHol
             AppCompatActivity activity = (AppCompatActivity) v.getContext();
             Bundle bundle = new Bundle();
             bundle.putString(EXTRA_NAME, holder.name.getText().toString());
-            DetailFragment detailFragment = new DetailFragment();
+            DetailPageFragment detailFragment = new DetailPageFragment();
             detailFragment.setArguments(bundle);
             activity.getSupportFragmentManager()
                     .beginTransaction()
