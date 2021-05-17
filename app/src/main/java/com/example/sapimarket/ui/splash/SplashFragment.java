@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sapimarket.R;
+import com.example.sapimarket.data.ModelCache;
 import com.example.sapimarket.ui.login.LoginFragment;
 
 public class SplashFragment extends Fragment {
@@ -47,6 +48,9 @@ public class SplashFragment extends Fragment {
 
         appName.setAnimation(topAnimation);
         logo.setAnimation(bottomAnimation);
+
+        ModelCache modelCache = ModelCache.getInstance();
+        modelCache.loadData();
     }
 
     private void navigation() {
